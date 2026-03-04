@@ -1,0 +1,21 @@
+# Ignore model weights
+adapter/
+merged_model_1/
+
+# Ignore build artifacts
+*.safetensors
+*.bin
+*.pt
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual env
+.venv/
+
+# Ignore egg-info
+*.egg-info
+
+# Ignore git
+.git

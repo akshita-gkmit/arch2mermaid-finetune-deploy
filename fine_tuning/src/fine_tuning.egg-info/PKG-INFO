@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: fine-tuning
+Version: 0.1.0
+Summary: 7B LoRA fine-tuned model training and deployment
+Requires-Python: <3.12,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.1.0
+Requires-Dist: transformers>=4.37.0
+Requires-Dist: accelerate>=0.26.0
+Requires-Dist: bitsandbytes>=0.42.0
+Requires-Dist: peft>=0.8.0
+Requires-Dist: datasets>=2.16.0
+Requires-Dist: fastapi>=0.110.0
+Requires-Dist: uvicorn>=0.27.0
+Requires-Dist: pydantic>=2.6.0
+Requires-Dist: safetensors>=0.4.2
