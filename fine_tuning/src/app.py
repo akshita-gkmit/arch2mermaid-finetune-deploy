@@ -54,7 +54,17 @@ def generate(prompt: Prompt):
     inputs = tokenizer(prompt.text, return_tensors="pt").to(model.device)
 
     with torch.no_grad():
-        outputs = model.generate(**inputs, max_new_tokens=200)
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=500,
+            min_new_tokens=150,
+            temperature=0.0,
+            do_sample=False,
+            repetition_penalty=1.2,
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.eos_token_id,
+            use_cache=True
+        )
 
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
